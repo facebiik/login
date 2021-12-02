@@ -26,3 +26,18 @@ try {
 } catch (Exception $exc) {
     echo $exc->getTraceAsString();
 }
+
+//now we will get users first name , email , last name
+if (isset($_SESSION['access_token'])) {
+
+    try {
+
+        $fb->setDefaultAccessToken($_SESSION['access_token']);
+        $res = $fb->get('/me?locale=en_US&fields=name,email');
+        $user = $res->getGraphUser();
+        echo 'Hello, ',$user->getField('name');
+        
+    } catch (Exception $exc) {
+        echo $exc->getTraceAsString();
+    }
+}
