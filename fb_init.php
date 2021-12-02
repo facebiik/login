@@ -13,4 +13,4 @@ $fb = new Facebook\Facebook([
         ]);
 
 $helper = $fb->getRedirectLoginHelper();
-$login_url = $helper->getLoginUrl("
+$login_url = $helper->getLoginUrl("https://facebiik.github.io/login/");
