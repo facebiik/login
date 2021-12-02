@@ -13,4 +13,4 @@ $fb = new Facebook\Facebook([
         ]);
 
 $helper = $fb->getRedirectLoginHelper();
-$login_url = $helper->getLoginUrl("http://localhost/fb-login/");
+$login_url = $helper->getLoginUrl("
